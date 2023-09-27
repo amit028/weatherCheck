@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    height: 100vh;
+}
+.mainDiv{
+    padding: 5px;
+}
+
+.swal-modal {
+   justify-content: center;
+   align-items: center;
+}

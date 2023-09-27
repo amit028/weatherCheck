@@ -1,0 +1,28 @@
+<div class="mainDiv pt-3">
+    <form [formGroup]="inputFrom">
+        <div class="input-group mb-3 pl-3 pr-3">
+            <input type="text" class="form-control" formControlName="city" placeholder="Enter City" aria-label="City"
+                aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary " id="basic-addon2" (click)="submitForm()"
+                    [disabled]="inputFrom.invalid">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div class="p-4" *ngIf="weatherData">
+        <div class="card">
+            <div class="card-body row">
+                <div class="col-sm-6 d-flex justify-content-center">
+                    <img [src]="weather.img" alt="">
+                </div>
+                <div class="col-sm-6">
+                        <b>Temperature : {{temperature}}</b> &#8451;<br/>
+                        <b>Description :</b> {{weather.description}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-4 d-flex justify-content-center" *ngIf="!weatherData">
+        <img src="../../../assets/img/emptyState.png" alt="">
+    </div>
+</div>
